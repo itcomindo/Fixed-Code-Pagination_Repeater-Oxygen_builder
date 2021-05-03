@@ -1,0 +1,11 @@
+//** PUT THIS CODE BELOW IN CODE BLOCK AND PLACE IT ON VERY TOP YOUR INNER CONTENT **//
+
+<?php
+if ( get_query_var('paged') ) { $paged = get_query_var('paged'); }
+elseif ( get_query_var('page') ) { $paged = get_query_var('page'); }
+else { $paged = 1; }
+
+query_posts('posts_per_page=9&paged=' . $paged); 
+?>
+
+//** SPECIAL THANKS TO: https://trello.com/c/swFeU84f/35-pagination-in-easy-posts-on-static-homepage **//
